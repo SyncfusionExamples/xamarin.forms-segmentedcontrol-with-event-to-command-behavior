@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:SegmentSample"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:segmentCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SegmentSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout 
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Padding="20,0,20,0">
+        <buttons:SfSegmentedControl 
+            x:Name="Segment" 
+            SelectionTextColor= "White"
+            HeightRequest="80"
+            VisibleSegmentsCount="5"
+            Color="Transparent" 
+            BorderColor="#929292"
+            SelectedIndex="0" 
+            FontColor="#929292"
+            BackgroundColor="Transparent"
+            ItemsSource="{Binding ItemCollection,Mode=TwoWay}">
+            <buttons:SfSegmentedControl.Behaviors>
+                <local:EventToCommandBehavior Command="{Binding SelectionChangedCommand}" EventName="SelectionChanged"/>
+            </buttons:SfSegmentedControl.Behaviors>
+        </buttons:SfSegmentedControl>
+    </StackLayout>
+</ContentPage>
