@@ -5,7 +5,7 @@ Xamarin.Forms SegmentedControl with Event to Command Behavior using MVVM.
 
 This project uses the following Syncfusion controls:
 
-* [SfSwitch](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) - To show the SegementedControl Event To Command Behaviour Sample.
+* [SfSEgmentedControl](https://www.syncfusion.com/xamarin-ui-controls/xamarin-segmented-control) - To show the SegementedControl Event To Command Behaviour Sample.
 
 ## Screenshots
 
