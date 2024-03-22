@@ -19,11 +19,11 @@ Set the control to content in ContentPage.
     <buttons:SfSegmentedControl  />
 </ContentPage.Content>
 ```
-# Dealing with selection changed in Xamarin Segmented Control
+## Dealing with selection changed in Xamarin Segmented Control
 
 The selection changed event occurs when there is a change from one segment item to another in the segmented control. It can be handled by two ways.
 
-## User interface
+### User interface
 When users navigate from one item to another, selection is changed, so that the SelectedIndex value is updated to the new index of the item. The segmented control provides the SelectionChanged event, which is triggered when the selection is changed with the SelectionChangedEventArgs.
 
 Index - Gets the current index value of the selected item.
@@ -33,7 +33,7 @@ Index - Gets the current index value of the selected item.
 ```
 <buttons:SfSegmentedControl x:Name = "segmentedControl" SelectionChanged="Handle_SelectionChanged"/>
 ```
-## Selected Index through programmatically.
+### Selected Index through programmatically.
 Users can set the default value programmatically for the selection to be placed. The selection is updated based on the index value given for the SelectedIndex.
 
 **[XAML]**
@@ -41,7 +41,7 @@ Users can set the default value programmatically for the selection to be placed.
 <buttons:SfSegmentedControl SelectedIndex="2"/>
 ```
 
-## Event to command
+### Event to command
 
 The SegmentedControl event can be converted into commands using Behaviors. To achieve this, create a command in the ViewModel class and use Behaviors to associate it to the SegmentedControl event.
 
